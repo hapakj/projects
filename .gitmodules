@@ -1,3 +1,6 @@
 [submodule "hcl"]
 	path = hcl
 	url = https://github.com/hapakj/hcl.git
+[submodule "hra"]
+	path = hra
+	url = https://github.com/hapakj/hra.git
