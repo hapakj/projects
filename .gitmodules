@@ -1,0 +1,3 @@
+[submodule "hcl"]
+	path = hcl
+	url = https://github.com/hapakj/hcl.git
