@@ -7,3 +7,9 @@
 [submodule "test_and_tools"]
 	path = test_and_tools
 	url = https://github.com/hapakj/test_and_tools.git
+[submodule "sandbox"]
+	path = sandbox
+	url = https://github.com/hapakj/sandbox.git
+[submodule "3rdparty/glm"]
+	path = 3rdparty/glm
+	url = https://github.com/g-truc/glm.git
