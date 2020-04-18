@@ -4,3 +4,6 @@
 [submodule "hra"]
 	path = hra
 	url = https://github.com/hapakj/hra.git
+[submodule "test_and_tools"]
+	path = test_and_tools
+	url = https://github.com/hapakj/test_and_tools.git
