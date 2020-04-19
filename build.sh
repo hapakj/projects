@@ -42,12 +42,12 @@ case $PLATFORM in
     ;;
 
     win-clang-x64)
-        cmake -G "Visual Studio 15 2017 Win64" -T "llvm-vs2014" ${CURRENT_DIR} 
+        cmake -G "Visual Studio 16 2019" -A x64 -T "ClangCL" ${CURRENT_DIR} 
         cmake --build . --config $CONFIG
     ;;
 
     win-clang-x86)
-        cmake -G "Visual Studio 15 2017" -T "llvm-vs2014" ${CURRENT_DIR} 
+        cmake -G "Visual Studio 16 2019" -A Win32 -T "ClangCL" ${CURRENT_DIR} 
         cmake --build . --config $CONFIG
     ;;  
 
