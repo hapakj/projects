@@ -7,10 +7,11 @@
 function create_and_go_to_out_dir {
     OUT_DIR_NAME=$OUT_DIR_PATH/out_projects_$PLATFORM
 
-    # on linux we also append the configuration
-    if [ "$PLATFORM" == "linux-clang" ] || [ "$PLATFORM" == "linux-gcc" ] ; then
-        OUT_DIR_NAME="$OUT_DIR_NAME"_"$CONFIG"
-    fi
+    case $PLATFORM in
+        linux-clang | ubuntu-1804-clang | ubuntu-2004-clang | linux-gcc | ubuntu-1804-gcc | ubuntu-2004-gcc)
+            OUT_DIR_NAME="$OUT_DIR_NAME"_"$CONFIG"
+        ;;
+    esac
 
     mkdir -p $OUT_DIR_NAME
     cd $OUT_DIR_NAME
@@ -51,7 +52,7 @@ case $PLATFORM in
         cmake --build . --config $CONFIG
     ;;  
 
-    linux-clang)
+    linux-clang | ubuntu-1804-clang | ubuntu-2004-clang)
         export CC=/usr/bin/clang
         export CXX=/usr/bin/clang++
 
@@ -59,7 +60,7 @@ case $PLATFORM in
         cmake --build .
     ;;
 
-    linux-gcc)
+    linux-gcc | ubuntu-1804-gcc | ubuntu-2004-gcc)
         export CC=/usr/bin/gcc
         export CXX=/usr/bin/g++
 
