@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 : ${PLATFORM:?"PLATFORM not set"}
 : ${CONFIG:?"CONFIG not set"}
 : ${OUT_DIR_PATH:=.}
